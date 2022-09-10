@@ -6,123 +6,178 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <style>
-    
-    .navbar
-    {
+    html{
+         scroll-behavior: smooth;
+    }
+    .navbar   {
         background: rgb(26, 25, 113);
-        padding: 20px 20%;
+        padding: 2px 13%;
         height: 60px;
-        
     }
     .navbar-nav a{
         color: #ffffff;
-        font-size: 12px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        margin-left: 4%;
-    }
-    .navbar img
-    {
-        height: 60px;
-        width: 60px;
-    }
-    .yazi h1
-    {
-       
-        padding: 30px 40%;
+        font-size: 13px;
         
     }
-    .yazi i
-    {
+    .yazi h1 {
+       padding: 30px 40%;
+        
+    }
+    .yazi i   {
         padding: 30px 30%;
     }
-    .bolum
-    {
+    .bolum {
         padding: 20px 20%;
         
     }
-    .bolum h1
-    {
+    .bolum h1    {
         font-size: 25px;
     }
     .bolum img{
-        width: 350px;
-        height: 350px;
-        margin-bottom: 4%;
-        margin-top: 4%;
+        padding: auto;
+        
     }
     .list li{
         content: icon;
     }
+    .ilk    {
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+    .son    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .to-top{
+        background: #dc2e2e;
+        position: fixed;
+        bottom: 16px;
+        right: 32px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        font-size: 40px;
+        color:#ffffff;
+        text-decoration: none;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s;
+
+    }
+    .to-top.active{
+        bottom: 32px;
+        pointer-events: auto;
+        opacity: 1;
+    }
+    
+    .underline {
+       text-decoration: none; 
+       position: relative; 
+     }   
+
+    .underline::before {
+        position: absolute;
+        content: '';
+        height: 5px;
+		bottom: -4px;       
+        margin: 0 auto;
+        right: 50px;
+        left: 0;
+		width: 10%;
+		background:rgb(26, 25, 113);
+        
+    }
+	 
   </style>
 
 </head>
   <body>
 
     <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-          <img class="navimg navbar-brand" src="https://www.qtech.com.tr/assets/img/logo.png" alt="">
-          
-          
-            <div class="navbar-nav justify-content-end ">
-              <a class="nav-link " href="#">Home</a>
-              <a class="nav-link" href="#">About</a>
-              <a class="nav-link" href="#">Services</a>
-              <a class="nav-link ">Contact</a>
-              
+        <nav class="navbar container-fluid navbar-expand-lg">
+            <div class="container">
+                <a class="navimg navbar-brand" href="#">
+                    <img  src="https://www.qtech.com.tr/assets/img/logo.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end opacity-50 fw-bold" id="navbarNav">
+                    <ul class="navbar-nav  ">
+                      <li class="nav-item  ">
+                        <a class="nav-link navbarLinkColor " aria-current="page" href="#"> Home </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link navbarLinkColor" href="#">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link navbarLinkColor" href="#">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link navbarLinkColor" href="#"> Contact</a>
+                      </li>
+                    </ul>
+                  </div>
             </div>
-          
-        </div>
+        </nav>   
       </nav>
-
-
+     
 <!-- container start -->
 
       <div class="container">
         <div class="yazi row">
-            <h1>ABOUT US</h1>
-            
+            <h1 class="underline">ABOUT US</h1>
             <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisicing.</i>
-            
         </div>
 
         <div class="bolum row">
-            <div class="col-sm-6">
+            <div class="ilk col-sm-6">
             <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-            <img class="rounded" src="https://picsum.photos/400/400" alt="">
+            <img class="rounded" src="https://picsum.photos/350/350" alt="">
             <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam inventore quo excepturi veritatis exercitationem  nulla?</i>
-           <br>
+            <br>
             <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sequi voluptatibus error velit minima sapiente officiis porro rerum nemo sed illum maxime, soluta, accusamus repellendus! Possimus reprehenderit nemo fugiat vitae?</i>
-        </div>
+            </div>
 
-            <div class="col-sm-6">
+            <div class="son col-sm-6">
             <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut.</i>
             <div class="list">
                 <ul>
-                    <li>      Lorem ipsum dolor sit amet consectetur.              </li>
+                    <li>Lorem ipsum dolor sit amet consectetur. </li>
                     <li>Lorem ipsum dolor sit.</li>
                     <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                 </ul>
-
             </div>
-            <i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, consequuntur. Itaque animi pariatur ducimus nihil vitae culpa veritatis corporis, eaque eos maiores aliquid! Neque?</i>
+            <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero saepe quaerat? Repellendus optio accusamus a cum aliquam quas debitis totam animi, reprehenderit eveniet veniam ea modi incidunt nulla, consectetur recusandae illo assumenda tempore. Repudiandae, laudantium! Alias quas eaque voluptatem quam corporis eius, obcaecati veritatis quisquam doloremque non officia officiis? Quae veniam reprehenderit voluptates nihil placeat vero voluptatem provident quidem sit dolor atque ullam perferendis quas, illo voluptate deleniti necessitatibus dolorem culpa, quod numquam itaque, similique delectus quo assumenda? Nostrum distinctio soluta tempora at est iusto quod aperiam molestias, sit nisi, suscipit tenetur, nulla odit natus? Veritatis recusandae mollitia consequatur?</i><i>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, consequuntur. Itaque animi pariatur ducimus nihil vitae culpa veritatis corporis, eaque eos maiores aliquid! Neque?</i>
             <video width="350" height="350" controls >
                 <source src="https://joy.videvo.net/videvo_files/video/free/2014-12/large_watermarked/Metal_Wind_Chimes_at_Sunset_preview.mp4"  type="video/mp4">
-                
-                
                 Tarayıcınız video etiketini desteklemiyor.
             </video>
+            </div>
         </div>
-
-        </div>
-        
-
       </div>
 
 <!-- container end -->
+  
+<a href="#" class="to-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
 
+<script>
+    const toTop =document.querySelector(".to-top");
 
+    window.addEventListener("scroll",()=>{
+        if(window.pageYOffset>10){
+            toTop.classList.add("active");
+        }
+        else{
+            toTop.classList.remove("active");
+        }
+    })
 
-
+</script>
+<script src="https://kit.fontawesome.com/7808172edc.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="src/jquery.scrollUp.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
